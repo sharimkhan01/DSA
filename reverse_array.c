@@ -1,25 +1,27 @@
 #include <stdio.h>
-// #define MAX 100;
-
 int main()
 {
-    // Declaring the variables
-    int size, arr[100];
-
-    // Getting the size of the array
-    // printf("Enter the size of the array");
-    scanf("%d", &size);
-
-    // Getting the value of array from user
-    for (int i = 0; i < size; i++)
+    char s[1000], r[1000], p[1000];
+    int begin, end, c = 0;
+    printf("Input a string\n");
+    gets(s);
+    p[1000] = s[1000];
+    while (s[c] != '\0')
     {
-        scanf("%d", &arr[i]);
+        c++;
     }
 
-    for (int i = size - 1; i >= 0; i--)
+    end = c - 1;
+
+    for (begin = 0; begin < c; begin++)
     {
-        printf("%d ", arr[i]);
+        r[begin] = s[end];
+        end--;
     }
+
+    r[begin] = '\0';
+
+    printf("%s\n", r);
 
     return 0;
 }
